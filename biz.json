@@ -1,0 +1,93 @@
+{
+    "1": {
+        "name": "Suberu and co",
+        "contact": {
+            "address": "234 ikorodu lagos",
+            "city": "Ikorodu",
+            "state": "Lagos",
+            "phone": "342 345 5342"
+        },
+        "product": "movie seller"
+    },
+    "2": {
+        "name": "Chinedu spare part",
+        "contact": {
+            "address": "234 alaba lagos",
+            "city": "Alaba",
+            "state": "Lagos",
+            "phone": "342 345 5313"
+        },
+        "product": "Car spare part seller"
+    },
+    "3": {
+        "name": "Izuka spare part",
+        "contact": {
+            "address": "234 ojota lagos",
+            "city" : "Ojota",
+            "state": "Lagos",
+            "phone": "232 345 5313"
+        },
+        "product": "Car spare part seller"
+    },
+    "4": {
+        "name": "Oloye Ladegan",
+        "contact": {
+            "address": "1010 asubiaro",
+            "city" : "Osogbo",
+            "state": "Osun",
+            "phone": "213 355 2342"
+        },
+        "product": "taxi driver"
+    },
+    "5": {
+        "name": "Jose pizza",
+        "contact": {
+            "address": "101 VI Lagos",
+            "city": "Victoria Island",
+            "state": "Lagos",
+            "phone": "202 355 4142"
+        },
+        "product": "fine pizza shop"
+    },
+    "6": {
+        "name": "dekunle fuji",
+        "contact": {
+            "address": "12 alagbole ajegunle Lagos",
+            "city": "Ajegunle",
+            "state": "Lagos",
+            "phone": "314 355 4022"
+        },
+        "product": "fuji musician"
+    },
+    "7": {
+        "name": "Lawod Metals",
+        "contact": {
+            "address": "12 alagbole Osogbo Osun",
+            "city": "Osogbo",
+            "state": "Osun",
+            "phone": "314 355 4022"
+        },
+        "product": "Metals fabrication"
+    },
+    "8": {
+        "name": "Chuku Intl",
+        "contact": {
+            "address": "123 ariara aba",
+            "city": "Aba",
+            "state": "Abia",
+            "phone": "312 355 6222"
+        },
+        "product": "Importer and Exporter"
+    },
+     "9": {
+        "name": "Musa cow market",
+        "contact": {
+            "address": "123 sabo dagama street",
+            "city": "Sokoto",
+            "state": "Sokoto",
+            "phone": "314 305 4022"
+        },
+        "product": "Importer and Exporter"
+    }
+    
+}
