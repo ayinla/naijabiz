@@ -109,7 +109,37 @@
             "phone": "234 305 4022"
         },
         "product": "Event planning"
-    }
+    },
     
+     "12": {
+        "name": "Ajepe Electronics",
+        "contact": {
+            "address": "152 Iginla street",
+            "city": "Egbatedo",
+            "state": "Ogun",
+            "phone": "234 305 4022"
+        },
+        "product": "Electronics Sale"
+    },
+    "13": {
+        "name": "Azuka Electronics",
+        "contact": {
+            "address": "103 salome street",
+            "city": "Oshodi",
+            "state": "Lagos",
+            "phone": "234 305 4022"
+        },
+        "product": "Electronics Sale"
+    },
+     "14": {
+        "name": "Arike Foods",
+        "contact": {
+            "address": "103 alawe street",
+            "city": "Ado",
+            "state": "Ekiti",
+            "phone": "334 545 4022"
+        },
+        "product": "Electronics Sale"
+    }
     
 }

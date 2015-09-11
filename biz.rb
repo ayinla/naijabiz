@@ -1,3 +1,9 @@
+
+class Ratings
+	@@stars = 0	
+end
+
+
 class Review
   def initialize reviewer, comment=""
     @reviewer = reviewer
@@ -9,7 +15,7 @@ class Review
  attr_accessor :reviewer, :comment
  attr_reader :time, :location
   def puts
-  	print "\nName: #{@reviewer} \nReview:  #{@comment} \nTime: #{@time}"
+  	print "\nName: #{@reviewer} \nReview:  #{@comment.chomp} \nTime: #{@time}"
   end
 end
 
@@ -21,19 +27,17 @@ class Contact
     @city = contact['city']
     @state = contact['state']
     @website = contact['website']
-
   end
   attr_reader :phone, :address, :state, :city
   
 end
 
 class Biz
-	@@count = 0
+
 	def  initialize (bizhash)
 		@name = bizhash["name"]
 		@contact = Contact.new(bizhash["contact"])
 		@product, @join_date  = bizhash["product"],  Time.now
-		@@count = @@count +1
 	  @bizhash	= hash
 	  @reviews = Array.new
 	 

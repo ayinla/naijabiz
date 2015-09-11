@@ -18,7 +18,7 @@ end
 
 =begin
 $naijabiz.each do |key, value|
-	puts value.print Connecting to security.ubuntu.com (91.189.92.201
+	puts value.print 
 	puts value.join_date 
 	puts
 	
@@ -39,7 +39,8 @@ state_search = gets.chomp
 search_state state_search
 
 $reviewed =  $naijabiz.values[rand($naijabiz.size)]
- puts $reviewed.print
+puts $reviewed.print
+
 def review
  
     puts "Write a review about the above coy " 
@@ -48,8 +49,9 @@ def review
     print "Enter your comment : "
     comment = gets
     $reviewed.getreview name, comment
-   
 end
+
+
 2.times do
     review
 end
