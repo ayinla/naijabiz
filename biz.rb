@@ -1,9 +1,3 @@
-load "states.rb"
-require 'json'
-require 'digest'
-
-naijabiz = Hash.new
-
 class Review
   def initialize reviewer
     @reviewer = reviewer
@@ -19,17 +13,17 @@ class Contact
     @address = contact['address']
     @coordinates =''
     @city = contact['city']
-    @state = contact['state']
+    @state = contact['state'].downcase
     @website = contact['website']
+
   end
   
-  attr_reader :phone
-  attr_reader :address
-  attr_reader :city
-  attr_reader :state
+  attr_reader :phone, :address, :state, :city
+  
 end
 
 class Biz
+
 	@@count = 0
 	def  initialize (bizhash)
 		@name = bizhash["name"]
@@ -38,13 +32,22 @@ class Biz
 		@@count = @@count +1
 	  @bizhash	= hash
 	  @Review = Array.new
-	end
+
+	  case  state.downcase
+		when 'lagos' ; $lagos.push(@bizhash) 
+   	 	when 'osun' ; $osun.push(@bizhash)
+   	 	when 'sokoto' ; $sokoto.push(@bizhash)
+   	 	when 'abia' ; $abia.push(@bizhash)
+   	 	else
+   	 		puts state
+   	end
+end
   
-	def hash
+def hash
 	  sha1 = Digest::SHA1.new
     ob = @name+ @contact.phone +  @contact.address  + @product
 		sha1.hexdigest ob
-	end
+end
 	
   def self.count
 		@@count
@@ -55,29 +58,13 @@ class Biz
 	end
 	
 	attr_reader :bizhash, :join_date
-	
-	
+	def state
+		@contact.state
+	end
 end
 
 
-file =  File.read('biz.json')
 
-hashes = JSON.parse(file)
-
-hashes.each do |biz|
-  bizob = Biz.new( (biz[-1]))
-	naijabiz[bizob.bizhash] = bizob
-end
-
-naijabiz.each do |key, value|
-	puts value.print 
-	puts value.join_date 
-	puts
-	
-end
-
-
-puts abuja.class
 
 
 
