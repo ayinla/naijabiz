@@ -88,6 +88,28 @@
             "phone": "314 305 4022"
         },
         "product": "Importer and Exporter"
+    },
+    "10": {
+        "name": "Balarabe exchange",
+        "contact": {
+            "address": "123 sabo dagama street",
+            "city": "Ibadan",
+            "state": "Oyo",
+            "phone": "423 305 4022"
+        },
+        "product": "Currency"
+    },
+    
+     "11": {
+        "name": "Makun even planner",
+        "contact": {
+            "address": "123 egbatedo street",
+            "city": "Egbatedo",
+            "state": "Lagos",
+            "phone": "234 305 4022"
+        },
+        "product": "Event planning"
     }
+    
     
 }
