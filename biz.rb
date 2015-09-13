@@ -30,6 +30,9 @@ class Contact
   end
   attr_reader :phone, :address, :state, :city
   
+  def to_dict
+  	{address: @address, city: @city, state: @state, website: @website}
+  end
 end
 
 class Biz
@@ -49,7 +52,7 @@ class Biz
    	 	when 'oyo' ; $oyo.push(@bizhash)
    	 	else
    	 		puts state
-   	end
+   	 end
 	end
   
 	def hash
@@ -85,6 +88,10 @@ class Biz
 		@reviews.each do |item|
 			item.puts
 		end
+	end
+
+	def todb
+		{id: self.hash, name: @name, contact: @contact.to_dict }
 	end
 end
 

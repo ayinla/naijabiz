@@ -2,7 +2,9 @@ load "states.rb"
 load "biz.rb"
 require 'json'
 require 'digest'
-#require 'mongo'
+require 'mongo'
+
+include Mongo
 
 
 $naijabiz = Hash.new
@@ -34,16 +36,15 @@ def search_state state
 end
 
 
-print "What state do you want to search: "
-state_search = gets.chomp
-search_state state_search
+#print "What state do you want to search: "
+#state_search = gets.chomp
+#search_state state_search
 
 $reviewed =  $naijabiz.values[rand($naijabiz.size)]
 puts $reviewed.print
 
 def review
- 
-    puts "Write a review about the above coy " 
+     puts "Write a review about the above coy " 
     print "Your name:  "
     name = gets.chomp
     print "Enter your comment : "
@@ -51,9 +52,8 @@ def review
     $reviewed.getreview name, comment
 end
 
+puts $reviewed.todb
 
-2.times do
-    review
-end
+client = Mongo::Client.new(['127.0.0.1:27017'], :database => 'naijabiz')
 
-$reviewed.showreviews
+result = client[:biz].insert_one($reviewed.todb)
