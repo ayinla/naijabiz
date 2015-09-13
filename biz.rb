@@ -91,7 +91,7 @@ class Biz
 	end
 
 	def todb
-		{id: self.hash, name: @name, contact: @contact.to_dict }
+		{_id: self.hash, name: @name, contact: @contact.to_dict }
 	end
 end
 
