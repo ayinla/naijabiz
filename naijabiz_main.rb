@@ -54,6 +54,6 @@ end
 
 puts $reviewed.todb
 
-client = Mongo::Client.new(['127.0.0.1:27017'], :database => 'naijabiz')
+#client = Mongo::Client.new(['127.0.0.1:27017'], :database => 'naijabiz')
 
-result = client[:biz].insert_one($reviewed.todb)
+#result = client[:biz].insert_one($reviewed.todb)

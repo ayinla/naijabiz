@@ -106,6 +106,7 @@
             "address": "123 egbatedo street",
             "city": "Egbatedo",
             "state": "Lagos",
+            "email" : "makun.theplanner@gmail.com",
             "phone": "234 305 4022"
         },
         "product": "Event planning"
@@ -117,6 +118,7 @@
             "address": "152 Iginla street",
             "city": "Egbatedo",
             "state": "Ogun",
+            "email" : "ajepe.aye@gmail.com",
             "phone": "234 305 4022"
         },
         "product": "Electronics Sale"
@@ -127,6 +129,7 @@
             "address": "103 salome street",
             "city": "Oshodi",
             "state": "Lagos",
+            "email" : "chukwu.azuka@gmail.com",
             "phone": "234 305 4022"
         },
         "product": "Electronics Sale"
@@ -137,9 +140,20 @@
             "address": "103 alawe street",
             "city": "Ado",
             "state": "Ekiti",
+            "email" : "arike.sekoni@gmail.com",
+            "phone": "334 545 4022"
+        },
+        "product": "Electronics Sale"
+    },
+      "15": {
+        "name": "Sekoni Mechanic",
+        "contact": {
+            "address": "103 isale aro street",
+            "city": "Osogbo",
+            "state": "Osun",
+            "email" : "Sekoni@gmail.com",
             "phone": "334 545 4022"
         },
         "product": "Electronics Sale"
     }
-    
 }

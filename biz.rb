@@ -21,43 +21,40 @@ end
 
 class Contact
   def initialize contact
-    @phone = contact['phone']
-    @address = contact['address']
+    @phone, @address, @city, @state  = contact['phone'], contact['address'], contact['city'] ,contact['state']
     @coordinates =''
-    @city = contact['city']
-    @state = contact['state']
     @website = contact['website']
+    @email = contact['email']|| ""
   end
-  attr_reader :phone, :address, :state, :city
+  attr_reader :phone, :address, :state, :city, :email
   
   def to_dict
-  	{address: @address, city: @city, state: @state, website: @website}
+  	{address: @address, city: @city, state: @state, website: @website, email: @email}
   end
 end
 
 class Biz
-
 	def  initialize (bizhash)
-		@name = bizhash["name"]
 		@contact = Contact.new(bizhash["contact"])
-		@product, @join_date  = bizhash["product"],  Time.now
-	  @bizhash	= hash
-	  @reviews = Array.new
+		@name, @product, @join_date  = bizhash["name"], bizhash["product"],  Time.now
+	  	@bizhash	= hash
+	  	@reviews = Array.new
 	 
 	  case  state.downcase
-			when 'lagos' ; $lagos.push(@bizhash) 
+		when 'lagos' ; $lagos.push(@bizhash) 
    	 	when 'osun' ; $osun.push(@bizhash)
    	 	when 'sokoto' ; $sokoto.push(@bizhash)
    	 	when 'abia' ; $abia.push(@bizhash)
    	 	when 'oyo' ; $oyo.push(@bizhash)
    	 	else
    	 		puts state
-   	 end
+   	  end
 	end
   
 	def hash
-	  sha1 = Digest::SHA1.new
-    ob = @name+ @contact.phone +  @contact.address  + @product
+	  	sha1 = Digest::SHA1.new
+    	ob = @name+ @contact.phone +  @contact.address  + @product +
+    	@join_date.to_s + @contact.email 
 		sha1.hexdigest ob
 	end
 	
@@ -66,7 +63,8 @@ class Biz
 	end
 
 	def print 
-		"Name: #{@name} \nAddress: #{@contact.address } #{@contact.city}, \nState: #{@contact.state }. \nPhone: #{@contact.phone} \nProduct: #{@product}\n"
+		"Name: #{@name} \nAddress: #{@contact.address } #{@contact.city}, 
+		\nState: #{@contact.state }. \nPhone: #{@contact.phone} \nProduct: #{@product}\n"
 	end
 	
 	attr_reader :bizhash, :join_date
@@ -91,7 +89,8 @@ class Biz
 	end
 
 	def todb
-		{_id: self.hash, name: @name, contact: @contact.to_dict }
+		{_id: self.hash, name: @name, contact: @contact.to_dict , product: @product,
+		 join_date: @join_date, reviews: @reviews}
 	end
 end
 
