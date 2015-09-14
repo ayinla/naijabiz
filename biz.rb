@@ -58,7 +58,7 @@ class Biz
 		sha1.hexdigest ob
 	end
 	
-  def self.count
+  	def self.count
 		@@count
 	end
 
