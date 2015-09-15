@@ -8,8 +8,9 @@ keywords = %w[
      tv
      taxi
      clothes
+     shirts
+     phones
+     apple
+     android
 ]
     
-    keywords.each_with_index do |item, index|
-        print "#{index}  #{item}\n "
-    end

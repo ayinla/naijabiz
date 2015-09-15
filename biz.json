@@ -23,7 +23,7 @@
         "name": "Izuka spare part",
         "contact": {
             "address": "234 ojota lagos",
-            "city" : "Ojota",
+            "city": "Ojota",
             "state": "Lagos",
             "phone": "232 345 5313"
         },
@@ -33,7 +33,7 @@
         "name": "Oloye Ladegan",
         "contact": {
             "address": "1010 asubiaro",
-            "city" : "Osogbo",
+            "city": "Osogbo",
             "state": "Osun",
             "phone": "213 355 2342"
         },
@@ -79,7 +79,7 @@
         },
         "product": "Importer and Exporter"
     },
-     "9": {
+    "9": {
         "name": "Musa cow market",
         "contact": {
             "address": "123 sabo dagama street",
@@ -99,26 +99,24 @@
         },
         "product": "Currency"
     },
-    
-     "11": {
+    "11": {
         "name": "Makun even planner",
         "contact": {
             "address": "123 egbatedo street",
             "city": "Egbatedo",
             "state": "Lagos",
-            "email" : "makun.theplanner@gmail.com",
+            "email": "makun.theplanner@gmail.com",
             "phone": "234 305 4022"
         },
         "product": "Event planning"
     },
-    
-     "12": {
+    "12": {
         "name": "Ajepe Electronics",
         "contact": {
             "address": "152 Iginla street",
             "city": "Egbatedo",
             "state": "Ogun",
-            "email" : "ajepe.aye@gmail.com",
+            "email": "ajepe.aye@gmail.com",
             "phone": "234 305 4022"
         },
         "product": "Electronics Sale"
@@ -129,31 +127,42 @@
             "address": "103 salome street",
             "city": "Oshodi",
             "state": "Lagos",
-            "email" : "chukwu.azuka@gmail.com",
+            "email": "chukwu.azuka@gmail.com",
             "phone": "234 305 4022"
         },
         "product": "Electronics Sale"
     },
-     "14": {
+    "14": {
         "name": "Arike Foods",
         "contact": {
             "address": "103 alawe street",
             "city": "Ado",
             "state": "Ekiti",
-            "email" : "arike.sekoni@gmail.com",
+            "email": "arike.sekoni@gmail.com",
             "phone": "334 545 4022"
         },
         "product": "Electronics Sale"
     },
-      "15": {
+    "15": {
         "name": "Sekoni Mechanic",
         "contact": {
             "address": "103 isale aro street",
             "city": "Osogbo",
             "state": "Osun",
-            "email" : "Sekoni@gmail.com",
+            "email": "Sekoni@gmail.com",
             "phone": "334 545 4022"
         },
         "product": "Electronics Sale"
+    },
+    "16": {
+        "name": "Chima Electricals",
+        "contact": {
+            "address": "103 Sabo n Gari Rd",
+            "city": "Abuja",
+            "state": "Abuja",
+            "email": "chima.chimai@gmail.com",
+            "phone": "334 545 4022"
+        },
+        "product": "Electrical parts Sale"
     }
 }

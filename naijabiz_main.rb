@@ -2,9 +2,9 @@ load "states.rb"
 load "biz.rb"
 require 'json'
 require 'digest'
-require 'mongo'
+#require 'mongo'
 
-include Mongo
+#include Mongo
 
 
 $naijabiz = Hash.new
@@ -41,7 +41,7 @@ end
 #search_state state_search
 
 $reviewed =  $naijabiz.values[rand($naijabiz.size)]
-puts $reviewed.print
+#puts $reviewed.print
 
 def review
      puts "Write a review about the above coy " 
@@ -52,8 +52,15 @@ def review
     $reviewed.getreview name, comment
 end
 
+review
+
+
 puts $reviewed.todb
 
 #client = Mongo::Client.new(['127.0.0.1:27017'], :database => 'naijabiz')
 
 #result = client[:biz].insert_one($reviewed.todb)
+
+$osun.each do |item|
+    puts $naijabiz[item].todb
+end

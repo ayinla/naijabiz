@@ -14,8 +14,8 @@ class Review
   
  attr_accessor :reviewer, :comment
  attr_reader :time, :location
-  def puts
-  	print "\nName: #{@reviewer} \nReview:  #{@comment.chomp} \nTime: #{@time}"
+  def to_dict
+  	{Name: @reviewer, Review:  @comment.chomp , Time: @time}
   end
 end
 
@@ -46,6 +46,9 @@ class Biz
    	 	when 'sokoto' ; $sokoto.push(@bizhash)
    	 	when 'abia' ; $abia.push(@bizhash)
    	 	when 'oyo' ; $oyo.push(@bizhash)
+   	 	when 'ogun' ; $ogun.push(@bizhash)
+   	 	when 'ekiti' ; $ekiti.push(@bizhash)
+   	 	when 'abuja' ; $abuja.push(@bizhash)
    	 	else
    	 		puts state
    	  end
@@ -79,7 +82,7 @@ class Biz
 		@review.reviewer = reviewer
 		@review.comment = comment
 		
-		@reviews.push(@review)
+		@reviews.push(@review.to_dict)
 	end
 	
 	def showreviews
@@ -90,7 +93,8 @@ class Biz
 
 	def todb
 		{_id: self.hash, name: @name, contact: @contact.to_dict , product: @product,
-		 join_date: @join_date, reviews: @reviews}
+		 join_date: @join_date, reviews: @reviews
+		 }
 	end
 end
 
