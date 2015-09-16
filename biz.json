@@ -25,6 +25,8 @@
             "address": "234 ojota lagos",
             "city": "Ojota",
             "state": "Lagos",
+            "email": "izuka@yahoo.com",
+            "website": "www.izuka.com",
             "phone": "232 345 5313"
         },
         "product": "Car spare part seller"
@@ -161,6 +163,7 @@
             "city": "Abuja",
             "state": "Abuja",
             "email": "chima.chimai@gmail.com",
+            "website": "www.chima.com",
             "phone": "334 545 4022"
         },
         "product": "Electrical parts Sale"

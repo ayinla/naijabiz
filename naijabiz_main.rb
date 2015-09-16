@@ -1,9 +1,9 @@
 load "states.rb"
 load "biz.rb"
+load "functions.rb"
 require 'json'
 require 'digest'
 #require 'mongo'
-
 #include Mongo
 
 
@@ -27,13 +27,6 @@ $naijabiz.each do |key, value|
 end
 =end
 
-def search_state state
-    $naijabiz.each do |item, value|
-        if value.state.downcase == state.downcase
-            puts value.print; puts
-        end
-    end
-end
 
 
 #print "What state do you want to search: "
@@ -43,24 +36,25 @@ end
 $reviewed =  $naijabiz.values[rand($naijabiz.size)]
 #puts $reviewed.print
 
-def review
-     puts "Write a review about the above coy " 
-    print "Your name:  "
-    name = gets.chomp
-    print "Enter your comment : "
-    comment = gets
-    $reviewed.getreview name, comment
-end
+
 
 review
 
 
-puts $reviewed.todb
+
+puts $reviewed.to_dict
+
 
 #client = Mongo::Client.new(['127.0.0.1:27017'], :database => 'naijabiz')
 
 #result = client[:biz].insert_one($reviewed.todb)
 
-$osun.each do |item|
-    puts $naijabiz[item].todb
+$lagos.each do |item|
+    10 .times do 
+        Random.new_seed
+        givestar $naijabiz[item], rand(5) + 1
+    end
+    $naijabiz[item].average_star
+    puts $naijabiz[item].to_dict
 end
+
