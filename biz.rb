@@ -1,5 +1,5 @@
-
-
+require 'forwardable'
+include Forwardable
 
 class Review
   def initialize reviewer, comment=""
@@ -42,6 +42,7 @@ class Contact
 end
 
 class Biz
+	extend Forwardable
 	def  initialize (bizhash)
 		@contact = Contact.new(bizhash["contact"])
 		@name, @product, @join_date  = bizhash["name"], bizhash["product"],  Time.now
@@ -87,16 +88,12 @@ class Biz
 		sha1.hexdigest ob
 	end
 	
-  	def self.count
-		@@count
-	end
-
-
+  
 	attr_reader :bizhash, :join_date
 	attr_accessor :stars
-	def state
-		@contact.state
-	end
+
+	def_delegators :@contact, :state ,:phone, :address, :state, :city, :email
+
 	
 	public
 	def getreview reviewer, comment

@@ -36,11 +36,7 @@ end
 $reviewed =  $naijabiz.values[rand($naijabiz.size)]
 #puts $reviewed.print
 
-
-
 review
-
-
 
 puts $reviewed.to_dict
 
@@ -56,5 +52,6 @@ $lagos.each do |item|
     end
     $naijabiz[item].average_star
     puts $naijabiz[item].to_dict
+    puts $naijabiz[item].email
 end
 

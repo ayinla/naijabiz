@@ -2,7 +2,6 @@ def givestar biz, star
     biz.stars[star] +=1	
 end
 
-
 def search_state state
     $naijabiz.each do |item, value|
         if value.state.downcase == state.downcase
