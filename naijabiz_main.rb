@@ -27,8 +27,6 @@ $naijabiz.each do |key, value|
 end
 =end
 
-
-
 #print "What state do you want to search: "
 #state_search = gets.chomp
 #search_state state_search

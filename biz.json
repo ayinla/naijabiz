@@ -5,7 +5,10 @@
             "address": "234 ikorodu lagos",
             "city": "Ikorodu",
             "state": "Lagos",
-            "phone": "342 345 5342"
+            "email": "suberu@gmail.com",
+            "website" : "www.suberuandco.com",
+            "phone": "342 345 5342",
+            "fax": "342 345 5342"
         },
         "product": "movie seller"
     },

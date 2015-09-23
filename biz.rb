@@ -13,16 +13,16 @@ class Review
  attr_accessor :reviewer, :comment
  attr_reader :time, :location
   def to_dict
-  	{Reviewer: @reviewer, Review:  @comment.chomp , Time: @time}
+  	{ Reviewer: @reviewer, Review:  @comment.chomp , Time: @time , Star: @star}
   end
 end
 
 
 class Contact
   def initialize contact
-    @phone, @address, @city, @state  = contact['phone'], contact['address'], contact['city'] ,contact['state']
+    @phone, @fax,  @address, @city, @state  = contact['phone'], contact['fax'], contact['address'], contact['city'] ,contact['state']
     @coordinates =''
-    @website = contact['website']
+    @website = contact['website'] || ""
     @email = contact['email']|| ""
   end
   
@@ -50,8 +50,7 @@ class Biz
 	  	@reviews = Array.new
 	  	setstate @contact.state
 	  	@stars = {1 => 0, 2=>0, 3=>0, 4=>0, 5 => 0}
-	  	@average_star = 0
-
+	  	@average_star = 5
 	end
 	
 	def updatebiz
@@ -62,24 +61,7 @@ class Biz
 	  	setstate @contact.state
 	end
 	
-	def setstate state
-		case  state.downcase
-			when 'lagos' ; $lagos.push(@bizhash) 
-   	 		when 'osun' ; $osun.push(@bizhash)
-   	 		when 'sokoto' ; $sokoto.push(@bizhash)
-   	 		when 'abia' ; $abia.push(@bizhash)
-   	 		when 'oyo' ; $oyo.push(@bizhash)
-   	 		when 'ogun' ; $ogun.push(@bizhash)
-   	 		when 'ekiti' ; $ekiti.push(@bizhash)
-   	 		when 'abuja' ; $abuja.push(@bizhash)
-   	 		when 'delta' ; $delta.push(@bizhash)
-   	 		when 'enugu' ; $enugu.push(@bizhash)
-   	 		when 'edo' ; $edo.push(@bizhash)
-   	 		when 'delta'; $delta.push(@bizhash)
-   	 		else
-   	 			puts state
-		end
-	end
+
   
 	def hash
 	  	sha1 = Digest::SHA1.new
@@ -88,8 +70,7 @@ class Biz
 		sha1.hexdigest ob
 	end
 	
-  
-	attr_reader :bizhash, :join_date
+  	attr_reader :bizhash, :join_date
 	attr_accessor :stars
 
 	def_delegators :@contact, :state ,:phone, :address, :state, :city, :email
